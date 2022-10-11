@@ -33,6 +33,9 @@ class LaVozSpider(CrawlSpider):
             items['seniority'] = response.css('ul.resumen li::text').getall()[0]
             items['area'] = response.css('ul.resumen a::text').getall()[2]
             items['descripcion'] = response.css('div.descripcion p::text').getall()
+            
+            #No tan importante por cómo está cargada la info en la página
+            
             #items['edad'] = response.css('ul.requisitos li::text').getall()[0]
             #items['residencia'] = response.css('ul.requisitos li::text').getall()[1]
             #items['remuneracion'] = response.css('ul.requisitos li::text').getall()[2]
